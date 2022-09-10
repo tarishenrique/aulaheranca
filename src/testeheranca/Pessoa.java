@@ -2,15 +2,11 @@
 package testeheranca;
 
 public class Pessoa {
-    private String nome;
+    protected String nome;
     private int idade;
     private char sexo;
     
-    public Pessoa(String nome, int idade, char sexo) {
-        this.nome = nome;
-        this.idade = idade;
-        this.sexo = sexo;
-    }
+    
 
     public String getNome() {
         return nome;
@@ -34,6 +30,19 @@ public class Pessoa {
 
     public void setSexo(char sexo) {
         this.sexo = sexo;
+    }
+
+    public void printPessoa(){
+
+        System.out.print(
+            "Nome:" + nome +
+            "\nIdade: " + idade + 
+            "\nSexo: " + sexo );
+    }
+
+    public double fazerAniversario(){
+        idade = idade + 1;
+        return idade;
     }
 
     
